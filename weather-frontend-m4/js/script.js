@@ -284,6 +284,15 @@ if (document.getElementById("datosCiudad")) {
 
     const contenedorEstadisticas = document.getElementById("estadisticas");
 
+    let contadores = "";
+    if (stats.diasSunny > 0) contadores += `☀️ Días soleados: ${stats.diasSunny} | `;
+    if (stats.diasPartlyCloudy > 0) contadores += `⛅ Días parcialmente nublados: ${stats.diasPartlyCloudy} | `;
+    if (stats.diasCloudy > 0) contadores += `☁️ Días nublados: ${stats.diasCloudy} | `;
+    if (stats.diasRainy > 0) contadores += `🌧️ Días lluviosos: ${stats.diasRainy} | `;
+    if (stats.diasSnowy > 0) contadores += `❄️ Días con nieve: ${stats.diasSnowy} | `;
+    if (stats.diasWindy > 0) contadores += `💨 Días ventosos: ${stats.diasWindy} | `;
+    if (stats.diasFoggy > 0) contadores += `🌫️ Días con neblina: ${stats.diasFoggy} | `;
+
     const htmlStats = `
     <div class="col-12">
         <div class="card">
@@ -293,6 +302,8 @@ if (document.getElementById("datosCiudad")) {
                 <p>🌡️ Máxima: ${stats.tempMax}°C</p>
                 <p>🌡️ Promedio: ${stats.promedio}°C</p>
                 <p>${stats.resumen}</p>
+                <p>${contadores}</p>
+
             </div>
         </div>
     </div>
