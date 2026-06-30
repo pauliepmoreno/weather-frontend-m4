@@ -3,7 +3,7 @@
 Aplicación de clima que muestra el estado del tiempo en ciudades icónicas del mundo.
 
 ## 🔗 Repositorio
-https://github.com/pauliepmoreno/weather-frontend-m3
+https://github.com/pauliepmoreno/weather-frontend-m4
 
 ## Cómo ejecutar
 Clonar el repositorio y abrir `index.html` en el navegador.
@@ -14,13 +14,17 @@ Clonar el repositorio y abrir `index.html` en el navegador.
 - JavaScript
 - SASS
 
-## Metodología de estilos
-BEM (Block Element Modifier). Las clases siguen la convención `.bloque__elemento--modificador`, por ejemplo `.place-card__name` o `.place-card--detail`.
+## Modelado de datos
+Los datos están definidos en un array de objetos en JS. Cada ciudad tiene `id`, `nombre`, `tempActual`, `estadoActual`, `emoji`, `humedad`, `viento` y un array `pronostico` con 7 días, cada uno con `dia`, `emoji`, `min`, `max` y `estado`.
 
-## Estructura SASS
-- `base/_variables.scss` → colores, tipografía y espaciados
-- `layout/_layout.scss` → estilos generales (header, navbar, footer, body)
-- `components/_place-card.scss` → estilos de las cards, hover y botones
+## Estadísticas que calcula la app
+- Temperatura mínima y máxima de la semana
+- Temperatura promedio (basada en los máximos diarios)
+- Conteo de días por tipo de clima
+- Resumen textual según el clima predominante
+
+## Metodología de estilos
+BEM (Block Element Modifier).
 
 ## Autora
 Paulina Poblete
